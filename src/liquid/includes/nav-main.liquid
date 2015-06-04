@@ -1,0 +1,10 @@
+{% comment %}
+  **  Menú Principal
+  **  Se define como arreglo globalmente en Gruntfile.js
+{% endcomment %}
+
+<nav class="main-menu">
+{% for pagina in navMain %}
+	<a href="{{ pagina.url }}" title="{{ pagina.titulo }} | {{ siteName }}" {% if pageTitle == pagina.titulo %} class="selected"{% endif %}>{{ pagina.titulo }}</a>
+{% endfor %}
+</nav>
