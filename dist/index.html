@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -8,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     
-    <title>Index | Site Title</title>
+    <title>Feria Incubo</title>
     
     
 <meta name="description" content="Site Description, for SEO purposes.">
@@ -30,47 +27,112 @@
 
 </head>
 <body class="index">
-    <!--[if lt IE 9]><p class="chromeframe">Tu navegador es <em>antiguo!</em> <a href="https://www.google.com/chrome?hl=es">Actualiza tu navegador</a> ó <a href="http://www.google.com/chromeframe/?redirect=true">instala Google Chrome Frame</a>.</p><![endif]-->
+<!--[if lt IE 9]><p class="chromeframe">Tu navegador es <em>antiguo!</em> <a href="https://www.google.com/chrome?hl=es">Actualiza tu navegador</a> ó <a href="http://www.google.com/chromeframe/?redirect=true">instala Google Chrome Frame</a>.</p><![endif]-->
 
-	
+    <header>
+        <div class="wrap">
+            <a href="#">Feria Incubo</a>
+        </div>
+    </header>
 
-<h1>Simple Grunt Workflow</h1>
+    <section>
 
-<h2>Index</h2>
+        <!-- Form -->
+        <article id="formulario" class="wrap">
+            <div class="left">
+                <div class="molino">
+                    <div class="box">
+                        <img src="assets/images/aspas.png" alt="" draggable="false">
+                    </div>
+                    <img src="assets/images/mastil.png" alt="" class="pole" draggable="false">
+                </div>
+            </div><!-- Left -->
+            
+            <div class="right">
+                <p class="titulo">Ingresa tus datos hagamos de esta experiencia un gran comienzo para la innovación y emprendimiento. </p>
+            
+                <form id="formularioForm" action="inc/php/submit.php" metod="post">
+                    <ul>
+                        <li>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </li>
+                        <li class="especial">
+                            <label for="empresa">Empresa / Institución:</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </li>
+                        <li>
+                            <label for="email">E-mail:</label>
+                            <input type="text" id="email" name="email" required>
+                        </li>
+                        <li>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono" required>
+                        </li>      
+                    </ul>
+                    <button>Enviar</button>
+                </form>
 
-<p>repo: https://github.com/juanbrujo/simple-grunt-workflow</p>
-<p>article: http://www.csslab.cl/2014/04/07/automatizacion-de-tareas-para-proyectos-en-front-end/</p>
-<p>@csslab / &copy;2014</p>
+                <div id="exito">Felicitaciones - Tus datos fueron enviados correctamente</div>
 
-  	
+                <div id="error">Error - Ha ocurrido un problema, vuelve a intentarlo</div>
 
-<nav class="main-menu">
+                <div id="contacto-directo">
+                    <p>Contacto directo</p>
+                    <p>+562 22138322</p>
+                    <p>+562 22138324</p>
+                </div>
+            </div><!-- Right -->
 
-	<a href="index.html" title="Index | Site Title"  class="selected">Index</a>
+        </article>
+        <!-- // Form -->
 
-	<a href="first-page.html" title="First Page | Site Title" >First Page</a>
+    </section>
 
-</nav>
-  
+    <footer>
+        <div class="wrap">
+            <ul>
+                <li>Patrocina:</li>
+                <li><img src="assets/images/logo-fundacionchile.jpg" alt="" draggable="false"></li>
+                <li><img src="assets/images/logo-universia.jpg" alt="" draggable="false"></li>
+                <li><img src="assets/images/logo-innapi.jpg" alt="" draggable="false"></li>
+                <li><img src="assets/images/logo-clubinnovacion.jpg" alt="" draggable="false"></li>
+                <li><img src="assets/images/logo-asosemprenderores.jpg" alt="" draggable="false"></li>
+                <li><img src="assets/images/logo-telefonica.jpg" alt="" draggable="false"></li>
+            </ul>
+            <ul>
+                <li>Media Partner:</li>
+                <li><img src="assets/images/logo-latercera.jpg" alt="" draggable="false"></li>
+                <li><img src="assets/images/logo-creoenchile.jpg" alt="" draggable="false"></li>
+            </ul>
+            <ul>
+                <li>Organiza:</li>
+                <li><img src="assets/images/logo-grupoactivo.jpg" alt="" draggable="false"></li>
+            </ul>
+        </div><!-- /wrap -->
+    </footer>
+
 	
 <script src="assets/js/libs/jquery-1.10.2.min.js"></script>
 <!--[if (gte IE 6)&(lte IE 8)]>
 <script src="assets/js/libs/selectivizr.min.js"></script>
 <![endif]-->
+<script src="assets/js/libs/jquery.validate.min.js"></script>
+<script src="assets/js/functions-form.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/utils/Draggable.min.js"></script>
+
+<script src="assets/js/libs/ThrowPropsPlugin.min.js"></script>
+
+
 <script src="assets/js/functions.min.js"></script>
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
 
-
-
-<script src="assets/js/functions-index.min.js"></script>
-
-
-
-
-		<script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>
 </body>
 </html>

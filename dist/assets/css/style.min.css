@@ -1,7 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,600);
 /* ==========================================================================
-   Description here please
-   coder: yournamehere
-   startdate: YYYYMMDD
+   Feria Incubo
+   coder: @flaku
+   startdate: 2015/06/04
    ========================================================================== */
 /* HTML5 Reset
 -------------------------------------------------------------------------------*/
@@ -90,14 +91,6 @@ section,
 details,
 summary {
   display: block;
-}
-img,
-object,
-embed {
-  max-width: 100%;
-}
-html {
-  overflow-y: scroll;
 }
 ul {
   list-style: none;
@@ -241,6 +234,158 @@ button {
 .clearfix {
   zoom: 1;
 }
+html,
 body {
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  height: 100%;
+}
+body {
+  font-family: 'Raleway', Helvetica, Verdana, Segoe, sans-serif;
+}
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+header a {
+  background: url('../images/logo-head.png') no-repeat left top;
+  width: 131px;
+  height: 114px;
+  display: block;
+  text-indent: -9999px;
+}
+footer {
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+footer .wrap {
+  overflow: hidden;
+}
+footer ul {
+  float: left;
+  margin: 10px 0 10px 35px;
+}
+footer ul:nth-of-type(1) {
+  margin-left: 0;
+}
+footer ul li {
+  float: left;
+  margin: 0 5px;
+}
+footer ul li:first-child {
+  font-size: 11px;
+  margin-top: 24px;
+  margin-left: 0;
+}
+body {
+  background: url('../images/bg_form.jpg') no-repeat left top;
+  background-size: cover;
+}
+section {
+  position: absolute;
+  bottom: 85px;
+  width: 100%;
+}
+article {
+  overflow: hidden;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+#formulario .titulo {
+  color: #fff;
+  font-size: 18px;
+  line-height: 170%;
+  margin-bottom: 20px;
+}
+#formulario .right {
+  width: 550px;
+}
+#formulario form {
+  overflow: hidden;
+  padding: 8px 0 0 0;
+}
+#formulario form li {
+  position: relative;
+  margin-bottom: 20px;
+}
+#formulario form label {
+  color: #333333;
+  font-size: 24px;
+  width: 140px;
+  display: inline-block;
+}
+#formulario form label.error {
+  font-size: 12px;
+  color: #fff;
+  background: red;
+  position: absolute;
+  width: auto!important;
+  right: 0;
+  text-align: center;
+  padding: 5px 10px;
+  top: -8px;
+}
+#formulario form input {
+  outline: none;
+  font-size: 22px;
+  padding: 5px;
+  border: 0;
+  width: 370px;
+  display: inline-block;
+  font-family: 'Raleway';
+}
+#formulario form button {
+  background: #e1007f;
+  color: #fff;
+  border: 0;
+  font-size: 24px;
+  font-family: 'Raleway';
+  padding: 5px 0;
+  width: 380px;
+  float: right;
+  margin: 0 26px 0 0;
+}
+#formulario form .especial label {
+  width: 260px;
+}
+#formulario form .especial input {
+  width: 250px;
+}
+#formulario #contacto-directo {
+  text-align: right;
+  margin: 10px 26px 0 0;
+}
+#formulario #exito,
+#formulario #error {
+  display: none;
+}
+#formulario #exito.active,
+#formulario #error.active {
+  display: block;
+}
+.molino {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+.molino .box {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: 6px;
+  z-index: 1;
+}
+.molino .pole {
+  position: absolute;
+  bottom: 0;
+  left: 148px;
 }

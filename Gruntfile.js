@@ -30,15 +30,15 @@ module.exports = function(grunt) {
         ]
         // END CUSTOM VARIABLES
       },
-      pages: {
-        files: [{ 
-          expand: true, 
-          flatten: true, 
-          src: 'src/liquid/*.liquid', 
-          dest: 'dist/', 
-          ext: '.html' 
-        }]
-      },
+      // pages: {
+      //   files: [{ 
+      //     expand: true, 
+      //     flatten: true, 
+      //     src: 'src/liquid/*.liquid', 
+      //     dest: 'dist/', 
+      //     ext: '.html' 
+      //   }]
+      // },
     },
     concat: {
       dist: {
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           'dist/assets/js/functions.min.js': ['src/js/functions.js'],
-          'dist/assets/js/functions-index.min.js': ['src/js/functions-index.js'],
+          'dist/assets/js/functions-form.min.js': ['src/js/functions-form.js'],
         }
       }
     },
