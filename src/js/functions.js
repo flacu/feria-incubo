@@ -10,8 +10,8 @@ Draggable.create(".box", {
   //   //console.log('giro');
   //   $('#box1').addClass('giro');
   // }
-  onDragEnd: function(event){
-    console.log('giro jaja');
+  onPress: function(event){
+    $('.box').removeClass('autogiro');
   },
   minDuration :450
 });

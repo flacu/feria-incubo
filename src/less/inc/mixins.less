@@ -83,3 +83,11 @@
   -moz-column-count: @arguments;
   column-count: @arguments;
 }
+.keyframes(@name) { 
+    @-webkit-keyframes @name {
+        .-frames(-webkit-);
+    }
+    @keyframes @name {
+        .-frames();
+    }
+}

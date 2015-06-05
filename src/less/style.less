@@ -25,6 +25,7 @@ body {
 .wrap{
 	max-width: 960px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 header{
@@ -76,7 +77,10 @@ footer{
 }//Footer
 
 body{
-	background: url('../images/bg_form.jpg') no-repeat left top;
+	background: url('../images/bg_intro.jpg') no-repeat left top;
+	//background: url('../images/bg_resumen.jpg') no-repeat left top;
+	//background: url('../images/bg_lugar.jpg') no-repeat left top;
+	//background: url('../images/bg_form.jpg') no-repeat left top;
 	background-size: cover;
 }
 
@@ -88,7 +92,22 @@ section{
 
 article{
 	overflow: hidden;
-}
+	display: none;
+
+	&.activo{
+		display: block;
+		min-height: 450px;
+	}
+
+	.pre-bg{
+		position: absolute;
+		min-width: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+}//Article
 
 .left{
 	float: left;
@@ -98,6 +117,132 @@ article{
 	float: right;
 }
 
+#intro{
+
+	h1{
+		color: #cfdc25;
+		font-family: 'Raleway';
+		font-weight: 600;
+		font-size: 24px;
+		text-transform: uppercase;
+		margin: 100px 0 10px 0;
+	}
+
+	p{
+		color: #fff;
+		font-family: 'Raleway';
+		font-size: 18px;
+	}
+
+	.flecha{
+		position: absolute;
+		top: 90px;
+		left: 50%;
+		margin-left: -468px;
+		z-index: -1;
+	}
+
+}//Intro
+
+
+#resumen{
+	
+	.right{
+		width: 550px;
+	}
+
+	.cont-flechas{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+
+		img{
+			position: absolute;
+		}
+
+		img:nth-of-type(1){
+			left: 90px;
+			top: 120px;
+		}
+
+		img:nth-of-type(2){
+			left: 280px;
+		}
+
+		img:nth-of-type(3){
+			left: 435px;
+			top: 170px;
+		}
+
+		img:nth-of-type(4){
+			top: 90px;
+		}
+
+	}//Cont flechas
+
+	p{
+		color: #fff;
+		font-family: 'Raleway';
+		font-size: 18px;
+		line-height: 180%;
+		margin: 60px 0 0 0;
+
+		b{
+			color: #cfdc25;
+		}
+
+	}//P
+
+}//Resumen
+
+#lugar{
+
+	.wrap{
+		position: relative;
+		overflow: visible;
+	}
+
+	h2{
+		color: #fff;
+		font-family: 'Raleway';
+		font-size: 49px;
+		font-weight: 700;
+
+		&:nth-of-type(2){
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+	}//H2
+
+	p.bajada{
+		width: 300px;
+		color: #fff;
+		font-family: 'Raleway';
+		font-size: 18px;
+		line-height: 180%;
+	}
+
+	.icono{
+		margin: 0 140px 0 200px;
+
+		p{
+			color: #fff;
+			font-family: 'Raleway';
+			font-size: 16px;
+			text-transform: uppercase;
+			margin-bottom: 3px;
+		}
+
+	}//Icono
+
+	.flecha-lugar{
+		position: absolute;
+		left: 80px;
+		top: 130px;
+	}
+
+}//Lugar
 
 
 #formulario{
@@ -180,7 +325,13 @@ article{
 	#contacto-directo{
 		text-align: right;
 		margin: 10px 26px 0 0;
-	}
+
+		a{
+			text-decoration: none;
+			color: @negro;
+		}
+
+	}//Contacto directo
 
 	#exito, #error{
 		display: none;
@@ -193,6 +344,8 @@ article{
 
 }//Formulario
 
+//=====
+
 .molino{
 	width: 350px;
 	height: 450px;
@@ -204,7 +357,11 @@ article{
 		height: 320px;
 		top: 6px;
 		z-index: 1;
-	}
+
+		&.autogiro{
+			.animation(autogiro 4s linear infinite);
+		}
+	}//Box
 
 	.pole{
 		position: absolute;
@@ -213,3 +370,28 @@ article{
 	}
 }//Molino
 
+
+//====Animations
+
+// Demo
+// & {
+//   .keyframes(nombre);.-frames(@-...){
+//       0% {
+//         @{-}transform: rotate(-140deg);
+//       }
+//       100% {
+//         @{-}transform: rotate(140deg);
+//       }
+//   }
+// }
+
+& {
+  .keyframes(autogiro);.-frames(@-...){
+      0% {
+        @{-}transform: rotate(0deg);
+      }
+      100% {
+        @{-}transform: rotate(360deg);
+      }
+  }
+}
