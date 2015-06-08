@@ -148,7 +148,7 @@ nav{
   			width: 100%;
   			height: 100%;
   			position: absolute;
-  			transform-origin: center;
+  			.transform-origin(center);
   			border-radius: 50%;
   			z-index: -1;
   			.transform(scale(0));
@@ -460,7 +460,7 @@ nav{
 		}
 
 		.flecha-lugar{
-			transform-origin: left top;
+			.transform-origin(left top);
 			.animation(lugar-flecha .7s ease forwards);
 		}
 
@@ -701,7 +701,7 @@ nav{
 
 	section{
 		position: relative;
-		bottom: initial;
+		bottom: inherit;
 	}
 
 	article.activo{
@@ -803,12 +803,12 @@ nav{
 					top: initial;
 
 					&:before{
-						transform-origin: left top;
+						.transform-origin(left top);
 						.transform(rotate(45deg));
 					}
 
 					&:after{
-						transform-origin: left bottom;
+						.transform-origin(left bottom);
 						.transform(rotate(-45deg));
 						margin-top: 9px;
 					}
@@ -890,7 +890,8 @@ nav{
 		}
 
 		.left{
-			overflow: hidden;
+			//overflow: hidden;
+			display: table;
 		}
 
 		.right{
@@ -901,9 +902,10 @@ nav{
 
 		.molino{
 			left: 50%;
+			top: 0;
 			margin-left: -160px;
 			.transform(scale(.7));
-			transform-origin: center top;
+			.transform-origin(center top);
 		}
 
 		.wrap{

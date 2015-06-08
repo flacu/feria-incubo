@@ -39,12 +39,12 @@ Draggable.create("#molino-inicio", {
 
 //Botonera navegacion
 $('nav a').on('click', function(e){
+  e.preventDefault();
 
   if($(this).hasClass('menu')){
     $('nav').toggleClass('activo');
   }
   else{
-    e.preventDefault();
     var seccion = $(this).data('seccion');
     $('#'+seccion).addClass('activo').siblings().removeClass('activo');
     $('body').css('background-image', 'url(assets/images/bg_'+seccion +'.jpg)');

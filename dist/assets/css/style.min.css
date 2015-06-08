@@ -346,6 +346,8 @@ nav a:before {
   width: 100%;
   height: 100%;
   position: absolute;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
   transform-origin: center;
   border-radius: 50%;
   z-index: -1;
@@ -606,6 +608,8 @@ nav.current {
   animation: lugar-icono 0.5s ease forwards;
 }
 #lugar.activo .flecha-lugar {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
   transform-origin: left top;
   -webkit-animation: lugar-flecha 0.7s ease forwards;
   animation: lugar-flecha 0.7s ease forwards;
@@ -838,7 +842,7 @@ nav.current {
   }
   section {
     position: relative;
-    bottom: initial;
+    bottom: inherit;
   }
   article.activo {
     min-height: inherit;
@@ -932,12 +936,16 @@ nav.current {
     top: initial;
   }
   nav.mobile.activo a.menu:before {
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
     transform-origin: left top;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   nav.mobile.activo a.menu:after {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
     transform-origin: left bottom;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -1000,7 +1008,7 @@ nav.current {
     height: 300px;
   }
   #intro .left {
-    overflow: hidden;
+    display: table;
   }
   #intro .right {
     position: relative;
@@ -1010,10 +1018,13 @@ nav.current {
   }
   #intro .molino {
     left: 50%;
+    top: 0;
     margin-left: -160px;
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);
     transform: scale(0.7);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
     transform-origin: center top;
   }
   #intro .wrap {
