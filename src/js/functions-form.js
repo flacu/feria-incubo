@@ -75,8 +75,8 @@ $(function(){
           data: datos,
           beforeSend: function(){
             //aca escondes el boton o le incluyes al click un return false, etc. para que no ocurra el multi submit.
-            $('#formulario button').css('opacity', '0.4');
-            $('#formulario button').on('click', function(){return false;});
+            $('#formularioForm button').css('opacity', '0.4');
+            $('#formularioForm button').on('click', function(){return false;});
           },
           success:function(respuesta){
             if(respuesta=='OK'){
