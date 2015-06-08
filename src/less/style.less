@@ -252,7 +252,7 @@ nav{
   		left: 50%;
   		margin-left: -82.5px;
   		z-index: 2;
-  		.animation(autogiro 2s ease infinite);
+  		.animation(autogiro 2s ease 3);
   		.transition(all .5s ease);
 	}
 
@@ -562,6 +562,33 @@ nav{
 
 		&.active{
 			display: block;
+			min-height: 130px;
+		}
+
+		h3{
+			color: #fff;
+			font-size: 28px;
+			margin-bottom: 5px;
+  			margin-top: 60px;
+  			padding: 0 12px;
+		}
+
+		p{
+			color: #fff;
+			font-size: 19px;
+			padding: 0 12px;
+		}
+
+		a{
+			background-color: #e1007e;
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			display: block;
+			width: 150px;
+			text-align: center;
+			margin-top: 12px;
+			margin-left: 12px;
 		}
 
 	}//exito - error
@@ -1065,5 +1092,9 @@ nav{
 		}
 
 	}//Formulario
+
+	#black{
+		height: 430px;
+	}
 
 }//Media queries 768px

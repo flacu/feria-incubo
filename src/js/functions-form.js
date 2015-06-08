@@ -81,9 +81,11 @@ $(function(){
           success:function(respuesta){
             if(respuesta=='OK'){
               $("#exito").addClass('active');
+              $("#formulario .titulo").css("display", "none");
               $("#formularioForm").css("display", "none");
             }else{
-              $("#error").addClass('active');           
+              $("#error").addClass('active');
+              $("#formulario .titulo").css("display", "none");           
               $("#formularioForm").css("display", "none");
             }
           }

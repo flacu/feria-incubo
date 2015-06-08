@@ -56,8 +56,8 @@ $('nav a').on('click', function(e){
   }
 });
 
-//Boton header reload
-$('header a').on('click', function(e){
+//Boton header reload - Btn error volver fomrulario
+$('header a, #error a').on('click', function(e){
   e.preventDefault();
   location.reload();
 });
