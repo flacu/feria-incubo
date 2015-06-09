@@ -464,13 +464,12 @@ nav .menu {
   opacity: 0;
 }
 #intro .flecha {
-  opacity: 1;
-  -webkit-transition: all 1s ease 2s;
-  transition: all 1s ease 2s;
+  -webkit-transition: all 1.5s ease 2s;
+  transition: all 1.5s ease 2s;
+  clip: rect(0, 936px, 226px, 0);
 }
 #intro .flecha.current {
-  opacity: 0;
-  left: 10%;
+  clip: rect(0, 0, 226px, 0);
 }
 nav {
   opacity: 1;
@@ -566,6 +565,10 @@ nav.current {
 #resumen.activo .amp-tres {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
+}
+#resumen.activo img:nth-of-type(4) {
+  -webkit-animation: resumen-showme 2s ease forwards;
+  animation: resumen-showme 2s ease forwards;
 }
 #lugar .wrap {
   position: relative;
@@ -856,6 +859,22 @@ nav.current {
   100% {
     opacity: 1;
     transform: rotate(1);
+  }
+}
+@-webkit-keyframes resumen-showme {
+  0% {
+    clip: rect(0, 0, 273px, 0);
+  }
+  100% {
+    clip: rect(0, 826px, 273px, 0);
+  }
+}
+@keyframes resumen-showme {
+  0% {
+    clip: rect(0, 0, 273px, 0);
+  }
+  100% {
+    clip: rect(0, 826px, 273px, 0);
   }
 }
 @media screen and (max-width: 768px) {

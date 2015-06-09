@@ -29,7 +29,17 @@ Draggable.create("#molino-inicio", {
   //   $('#box1').addClass('giro');
   // }
   onDragEnd: function(event){
-    $('#black, #intro .molino, #intro .right, #textos-inicio, #intro .flecha, nav').removeClass('current');
+    var mediaquery = window.matchMedia("(max-width: 768px)");
+    if (mediaquery.matches) {
+       // mobile
+       $('#black, #intro .molino, #intro .right, #textos-inicio, #intro .flecha, nav').removeClass('current');
+    } else {
+      // desktop
+      $('#black, #intro .molino, #intro .right, #textos-inicio, #intro .flecha').removeClass('current');
+      setTimeout(function(){$('nav a').eq(2).click()}, 7000);
+      setTimeout(function(){$('nav a').eq(3).click()}, 17000);
+      setTimeout(function(){$('nav a').eq(4).click();$('nav').removeClass('current');}, 23000);
+    }
   },
   onPress: function(event){
     $('#textos-inicio img').css('opacity', '0');

@@ -281,12 +281,11 @@ nav{
 }//right
 
 #intro .flecha{
-	opacity: 1;
-	.transition(all 1s ease 2s);
+	.transition(all 1.5s ease 2s);
+	clip: rect(0,936px,226px,0);
 
 	&.current{
-		opacity: 0;
-		left: 10%;
+		clip: rect(0,0,226px,0);
 	}	
 }
 
@@ -403,6 +402,9 @@ nav{
 		}
 		.amp-tres{
 			.animation-delay(1s);
+		}
+		img:nth-of-type(4){
+			.animation(resumen-showme 2s ease forwards);
 		}
 	}//Activo
 
@@ -714,6 +716,16 @@ nav{
   }
 }
 
+& {
+  .keyframes(resumen-showme);.-frames(@-...){
+      0% {
+        clip: rect(0, 0, 273px, 0);
+      }
+      100% {
+      	clip: rect(0, 826px, 273px, 0);
+      }
+  }
+}
 
 //Mobile & tables 
 @media screen and (max-width:768px){
