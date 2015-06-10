@@ -72,6 +72,11 @@ $('nav a').on('click', function(e){
   }
 });
 
+//Agrega animacion a flecha #intro
+$('nav a.intro').on('click', function(){
+  $('#intro .flecha').addClass('anima');
+});
+
 //Boton header reload - Btn error volver fomrulario
 $('header a, #error a').on('click', function(e){
   e.preventDefault();

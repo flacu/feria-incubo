@@ -379,7 +379,11 @@ nav{
 		left: 50%;
 		margin-left: -468px;
 		z-index: -1;
-	}
+
+		&.anima{
+			.animation(incio-flecha 2s ease forwards);
+		}
+	}//Flecha
 
 }//Intro
 
@@ -511,6 +515,7 @@ nav{
 		}
 
 		.flecha-lugar{
+			.transition(all .3s ease);
 			.transform-origin(left top);
 			.animation(lugar-flecha .7s ease forwards);
 		}
@@ -710,6 +715,17 @@ nav{
 }
 
 & {
+  .keyframes(incio-flecha);.-frames(@-...){
+      0% {
+      	clip: rect(0,0,226px,0);
+      }
+      100% {
+      	clip: rect(0,936px,226px,0);
+      }
+  }
+}
+
+& {
   .keyframes(resumen-flecha);.-frames(@-...){
       0% {
       	opacity: 0;
@@ -738,12 +754,12 @@ nav{
 & {
   .keyframes(lugar-flecha);.-frames(@-...){
       0% {
-      	opacity: 0;
         @{-}transform: rotate(25deg);
+        clip: rect(0,0,211px,0);
       }
       100% {
-      	opacity: 1;
         @{-}transform: rotate(0);
+        clip: rect(0,317px,211px,0);
       }
   }
 }

@@ -490,6 +490,10 @@ nav.current {
   margin-left: -468px;
   z-index: -1;
 }
+#intro .flecha.anima {
+  -webkit-animation: incio-flecha 2s ease forwards;
+  animation: incio-flecha 2s ease forwards;
+}
 #resumen .right {
   width: 550px;
 }
@@ -592,6 +596,8 @@ nav.current {
   animation: lugar-icono 0.5s ease forwards;
 }
 #lugar.activo .flecha-lugar {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transform-origin: left top;
   -ms-transform-origin: left top;
   transform-origin: left top;
@@ -754,6 +760,22 @@ nav.current {
     transform: translateY(0);
   }
 }
+@-webkit-keyframes incio-flecha {
+  0% {
+    clip: rect(0, 0, 226px, 0);
+  }
+  100% {
+    clip: rect(0, 936px, 226px, 0);
+  }
+}
+@keyframes incio-flecha {
+  0% {
+    clip: rect(0, 0, 226px, 0);
+  }
+  100% {
+    clip: rect(0, 936px, 226px, 0);
+  }
+}
 @-webkit-keyframes resumen-flecha {
   0% {
     opacity: 0;
@@ -796,22 +818,22 @@ nav.current {
 }
 @-webkit-keyframes lugar-flecha {
   0% {
-    opacity: 0;
     -webkit-transform: rotate(25deg);
+    clip: rect(0, 0, 211px, 0);
   }
   100% {
-    opacity: 1;
     -webkit-transform: rotate(0);
+    clip: rect(0, 317px, 211px, 0);
   }
 }
 @keyframes lugar-flecha {
   0% {
-    opacity: 0;
     transform: rotate(25deg);
+    clip: rect(0, 0, 211px, 0);
   }
   100% {
-    opacity: 1;
     transform: rotate(0);
+    clip: rect(0, 317px, 211px, 0);
   }
 }
 @-webkit-keyframes resumen-ampolletas {
