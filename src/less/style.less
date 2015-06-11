@@ -16,8 +16,6 @@ html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 
-@negro: #333;
-
 html, body{
 	height: 100%;
 }
@@ -54,6 +52,7 @@ footer{
 	width: 100%;
 	position: absolute;
 	bottom: 0;
+	min-height: 85px;
 
 	.wrap{
 		overflow: hidden;
@@ -61,7 +60,7 @@ footer{
 
 	ul{
 		float: left;
-		margin: 10px 0 10px 35px;
+		margin: 10px 0 10px 15px;
 
 		&:nth-of-type(1){
 			margin-left: 0;
@@ -75,6 +74,10 @@ footer{
 				font-size: 11px;
 				margin-top: 24px;
 				margin-left: 0;
+			}
+
+			img{
+				height: 55px;
 			}
 		}//Li
 
@@ -548,7 +551,7 @@ nav{
 		}
 
 		label{
-			color: @negro;
+			color: #fff;
 			font-size: 24px;
 			width: 140px;
 			display: inline-block;
@@ -604,11 +607,23 @@ nav{
 
 	#contacto-directo{
 		text-align: right;
-		margin: 10px 26px 0 0;
+		margin: 10px 26px 10px 0;
+		overflow: hidden;
+		width: 380px;
+		float: right;
+		color: #fff;
 
 		a{
 			text-decoration: none;
-			color: @negro;
+			color: #fff;
+		}
+
+		.left p{
+			margin-top: 16px;
+		}
+
+		.right{
+			width: auto;
 		}
 
 	}//Contacto directo
@@ -648,6 +663,11 @@ nav{
 		}
 
 	}//exito - error
+
+	.molino{
+		visibility: hidden;
+		opacity: 0;
+	}
 
 }//Formulario
 
@@ -797,6 +817,11 @@ nav{
 	
 	html, body{
 		height: inherit;
+	}
+
+	body{
+		background-color: #fff;
+  		background-position: center;
 	}
 
 	.left, .right{
@@ -977,7 +1002,7 @@ nav{
 	}//Textos inicio
 
 	footer ul:nth-of-type(1){
-		margin-left: 35px;
+		margin-left: 15px;
 	}
 
 	footer ul li{
@@ -990,6 +1015,7 @@ nav{
 
 		img{
 			width: 100%;
+			height: auto;
 		}
 	}//Footer ul li
 
@@ -1170,8 +1196,14 @@ nav{
 		}//Form
 
 		#contacto-directo{
-			margin: 20px 15px 20px 0;
-		}
+			margin: 20px 15px;
+			float: none;
+			width: auto;
+
+			.left{
+				float: left;
+			}
+		}//Contacto directo
 
 	}//Formulario
 

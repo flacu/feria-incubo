@@ -269,13 +269,14 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
+  min-height: 85px;
 }
 footer .wrap {
   overflow: hidden;
 }
 footer ul {
   float: left;
-  margin: 10px 0 10px 35px;
+  margin: 10px 0 10px 15px;
 }
 footer ul:nth-of-type(1) {
   margin-left: 0;
@@ -288,6 +289,9 @@ footer ul li:first-child {
   font-size: 11px;
   margin-top: 24px;
   margin-left: 0;
+}
+footer ul li img {
+  height: 55px;
 }
 body {
   background: url('../images/bg_intro.jpg') no-repeat left top;
@@ -622,7 +626,7 @@ nav.current {
   margin-bottom: 20px;
 }
 #formulario form label {
-  color: #333333;
+  color: #fff;
   font-size: 24px;
   width: 140px;
   display: inline-block;
@@ -666,11 +670,21 @@ nav.current {
 }
 #formulario #contacto-directo {
   text-align: right;
-  margin: 10px 26px 0 0;
+  margin: 10px 26px 10px 0;
+  overflow: hidden;
+  width: 380px;
+  float: right;
+  color: #fff;
 }
 #formulario #contacto-directo a {
   text-decoration: none;
-  color: #333333;
+  color: #fff;
+}
+#formulario #contacto-directo .left p {
+  margin-top: 16px;
+}
+#formulario #contacto-directo .right {
+  width: auto;
 }
 #formulario #exito,
 #formulario #error {
@@ -706,6 +720,10 @@ nav.current {
   text-align: center;
   margin-top: 12px;
   margin-left: 12px;
+}
+#formulario .molino {
+  visibility: hidden;
+  opacity: 0;
 }
 .molino {
   width: 350px;
@@ -885,6 +903,10 @@ nav.current {
   body {
     height: inherit;
   }
+  body {
+    background-color: #fff;
+    background-position: center;
+  }
   .left,
   .right {
     float: none;
@@ -1045,7 +1067,7 @@ nav.current {
     background-color: rgba(0, 0, 0, 0.6);
   }
   footer ul:nth-of-type(1) {
-    margin-left: 35px;
+    margin-left: 15px;
   }
   footer ul li {
     width: 40px;
@@ -1056,6 +1078,7 @@ nav.current {
   }
   footer ul li img {
     width: 100%;
+    height: auto;
   }
   #intro.activo {
     height: 300px;
@@ -1195,7 +1218,12 @@ nav.current {
     width: 100%;
   }
   #formulario #contacto-directo {
-    margin: 20px 15px 20px 0;
+    margin: 20px 15px;
+    float: none;
+    width: auto;
+  }
+  #formulario #contacto-directo .left {
+    float: left;
   }
   #black {
     height: 430px;
